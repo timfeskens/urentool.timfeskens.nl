@@ -1,0 +1,30 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { ReactNode, Suspense, useEffect, useRef } from "react";
+import clsx from "clsx";
+import { ClockIcon } from "@heroicons/react/24/solid";
+
+export default function Layout({ children }: { children?: ReactNode }) {
+  function isPageActive(href: string) {
+    return href === router.asPath;
+  }
+  const router = useRouter();
+
+  return (
+    <div className="bg-gray-900 h-screen w-screen">
+      <div className="sticky top-0 z-40 backdrop-blur-lg">
+        <div className="max-w-8xl mx-auto py-4 px-6">
+          <div className="relative flex items-center justify-between tracking-wide text-neutral-200">
+            <Link href="/" className="flex">
+              <ClockIcon className="w-8 h-8 hover:text-white" />
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <main className="max-w-8xl bg-gray-900">
+        <Suspense fallback={<div>loading...</div>}>{children}</Suspense>
+      </main>
+    </div>
+  );
+}
