@@ -128,7 +128,7 @@ function IntroSection() {
             </div>
           </div>
           <div className="h-screen w-screen flex justify-center items-center">
-            <div className="flex items-center h-[80vh] md:h-[50vh] max-w-3xl mx-8 shadow-md p-8 bg-white relative overflow-hidden">
+            <div className="flex items-center h-[80vh] md:h-[50vh] max-w-3xl mx-8 shadow-md p-8 bg-white relative">
               <div className="absolute bottom-[17vh] -left-[25vw]">
                 <Image
                   src="/react.png"

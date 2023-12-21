@@ -15,7 +15,7 @@ export default function Home() {
       <div className="h-screen w-screen flex justify-center items-center">
         <div className="flex items-center h-[50vh] max-w-6xl mx-8 shadow-md p-8 bg-white">
           <div className=" flex-col">
-            <div className="font-bold text-4xl mb-2">
+            <div className="font-bold text-4xl mb-2 text-black">
               Het<span className="text-blue-600"> nawoord</span>
             </div>
             <div className="tracking-wider text-neutral-700">
