@@ -1,17 +1,12 @@
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
-import nl from "date-fns/locale/nl";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import Link from "next/link";
-import { setDefaultOptions } from "date-fns";
 import { NextPage } from "next";
 import { ReactElement, ReactNode } from "react";
 import Layout from "../components/layout";
 
 const inter = Inter({ subsets: ["latin"] });
-
-setDefaultOptions({ locale: nl });
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
